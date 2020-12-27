@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RecipesSystem</name>
+    </assembly>
+    <members>
+        <member name="M:RecipesSystem.Controllers.RecepiesController.Get">
+            <summary>
+            Get All recepies
+            </summary>
+            <returns>List of recepies</returns>
+        </member>
+        <member name="M:RecipesSystem.Controllers.RecepiesController.Get(System.Int32)">
+            <summary>
+            Get recepie by id
+            </summary>
+            <param name="recepieId">Unique Id of Recepie</param>
+            <returns>recepie item</returns>
+        </member>
+        <member name="M:RecipesSystem.Controllers.TokenController.Get(RecipesSystem.Models.AuthenticateRequest)">
+            <summary>
+            Generates new JWT token, which have to be used in order to have access to api resources
+            </summary>
+            <param name="request">Request must have valid email and not empty password</param>
+            <returns>token</returns>
+        </member>
+    </members>
+</doc>
