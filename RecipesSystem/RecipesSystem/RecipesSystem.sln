@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesSystem", "RecipesSystem\RecipesSystem.csproj", "{8160A81C-5B7E-4078-A3A5-AD702B3037C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipesSystem", "RecipesSystem\RecipesSystem.csproj", "{8160A81C-5B7E-4078-A3A5-AD702B3037C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesSystem.Client", "RecipesSystem.Client\RecipesSystem.Client.csproj", "{19D33E70-8A49-4F83-B2A7-A94BAD071DDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesSystem.Console", "RecipesSystem.Console\RecipesSystem.Console.csproj", "{1516B7F6-E66C-48DC-AF0B-E1E744AAB1EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{8160A81C-5B7E-4078-A3A5-AD702B3037C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8160A81C-5B7E-4078-A3A5-AD702B3037C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8160A81C-5B7E-4078-A3A5-AD702B3037C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19D33E70-8A49-4F83-B2A7-A94BAD071DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D33E70-8A49-4F83-B2A7-A94BAD071DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D33E70-8A49-4F83-B2A7-A94BAD071DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D33E70-8A49-4F83-B2A7-A94BAD071DDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1516B7F6-E66C-48DC-AF0B-E1E744AAB1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1516B7F6-E66C-48DC-AF0B-E1E744AAB1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1516B7F6-E66C-48DC-AF0B-E1E744AAB1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1516B7F6-E66C-48DC-AF0B-E1E744AAB1EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

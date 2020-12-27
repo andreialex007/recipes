@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using RecipesSystem.Code;
 using RecipesSystem.Code.Entities;
+using RecipesSystem.Common;
 using RecipesSystem.Models;
 
 namespace RecipesSystem.Services
@@ -46,7 +48,7 @@ namespace RecipesSystem.Services
             }
             else
             {
-                recipe = this._appDbContext.Recipes.Single(x => x.Id == recipeDto.Id);
+                recipe = this._appDbContext.Recipes.Find(recipeDto.Id);
             }
 
             recipe.Calories = recipeDto.Calories;
@@ -56,7 +58,17 @@ namespace RecipesSystem.Services
             recipe.Name = recipeDto.Name;
             recipe.Year = recipeDto.Year;
 
-            _appDbContext.SaveChanges();
+            _appDbContext.Entry(recipe).OriginalValues["RowVersion"] = recipeDto.RowVersion;
+
+            try
+            {
+                _appDbContext.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException e)
+            {
+                throw new WebApiException("Item already updated by someone, please refresh entity");
+            }
+            
 
             _recepieHistoryService.AddRecord(recipe);
         }
@@ -73,7 +85,8 @@ namespace RecipesSystem.Services
                     Description = x.Description,
                     Ingredients = x.Ingredients,
                     Name = x.Name,
-                    Year = x.Year
+                    Year = x.Year,
+                    RowVersion = x.RowVersion
                 });
         }
 

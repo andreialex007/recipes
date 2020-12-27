@@ -9,5 +9,7 @@
         public string Ingredients { get; set; }
         public int Year { get; set; }
         public int Calories { get; set; }
+
+        public byte[] RowVersion { get; set; }
     }
 }

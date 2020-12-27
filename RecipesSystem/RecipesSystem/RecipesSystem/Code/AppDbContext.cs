@@ -16,5 +16,13 @@ namespace RecipesSystem.Code
             : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Recipe>()
+                .Property(p => p.RowVersion).IsConcurrencyToken();
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

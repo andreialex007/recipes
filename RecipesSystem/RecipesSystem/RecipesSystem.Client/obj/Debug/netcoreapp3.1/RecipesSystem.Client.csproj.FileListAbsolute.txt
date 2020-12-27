@@ -1,0 +1,8 @@
+C:\RecepiesGit\recipes\RecipesSystem\RecipesSystem\RecipesSystem.Client\obj\Debug\netcoreapp3.1\RecipesSystem.Client.AssemblyInfoInputs.cache
+C:\RecepiesGit\recipes\RecipesSystem\RecipesSystem\RecipesSystem.Client\obj\Debug\netcoreapp3.1\RecipesSystem.Client.AssemblyInfo.cs
+C:\RecepiesGit\recipes\RecipesSystem\RecipesSystem\RecipesSystem.Client\obj\Debug\netcoreapp3.1\RecipesSystem.Client.csproj.CoreCompileInputs.cache
+C:\RecepiesGit\recipes\RecipesSystem\RecipesSystem\RecipesSystem.Client\bin\Debug\netcoreapp3.1\RecipesSystem.Client.deps.json
+C:\RecepiesGit\recipes\RecipesSystem\RecipesSystem\RecipesSystem.Client\bin\Debug\netcoreapp3.1\RecipesSystem.Client.dll
+C:\RecepiesGit\recipes\RecipesSystem\RecipesSystem\RecipesSystem.Client\bin\Debug\netcoreapp3.1\RecipesSystem.Client.pdb
+C:\RecepiesGit\recipes\RecipesSystem\RecipesSystem\RecipesSystem.Client\obj\Debug\netcoreapp3.1\RecipesSystem.Client.dll
+C:\RecepiesGit\recipes\RecipesSystem\RecipesSystem\RecipesSystem.Client\obj\Debug\netcoreapp3.1\RecipesSystem.Client.pdb
