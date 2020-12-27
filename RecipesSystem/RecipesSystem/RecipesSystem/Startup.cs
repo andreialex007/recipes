@@ -37,7 +37,7 @@ namespace RecipesSystem
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(connectionString));
 
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddTransient<ICatsClient, CatsClient>();
+           // services.AddScoped<ICatsClient, CatsClient>();
 
             var policy = new AuthorizationPolicyBuilder()
                 .RequireAuthenticatedUser()
