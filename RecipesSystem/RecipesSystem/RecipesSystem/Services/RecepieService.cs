@@ -1,20 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using RecipesSystem.Code;
+using RecipesSystem.Code.Entities;
 
 namespace RecipesSystem.Services
 {
-    public class RecepieService
+    public interface IRecepieHistoryService
     {
-        private AppDbContext _appDbContext;
+        void AddRecord(Recipe dto);
+    }
 
-        public RecepieService(AppDbContext appDbContext)
+    public class RecepieHistoryService : IRecepieHistoryService
+    {
+        private readonly AppDbContext _appDbContext;
+
+        public RecepieHistoryService(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
 
+        public void AddRecord(Recipe dto)
+        {
+            _appDbContext.History.Add(new RecipeHistory
+            {
+                Calories = dto.Calories,
+                Country = dto.Country,
+                Description = dto.Description,
+                Ingredients = dto.Ingredients,
+                Name = dto.Name,
+                Year = dto.Year,
+                ModifyDate = DateTime.Now,
+                RecipeId = dto.Id
+            });
+            _appDbContext.SaveChanges();
+        }
 
     }
 }

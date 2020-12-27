@@ -17,6 +17,7 @@ using Microsoft.OpenApi.Models;
 using RecipesSystem.Code;
 using RecipesSystem.Code.Entities;
 using RecipesSystem.Common;
+using RecipesSystem.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace RecipesSystem
@@ -37,7 +38,8 @@ namespace RecipesSystem
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(connectionString));
 
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
-           // services.AddScoped<ICatsClient, CatsClient>();
+            services.AddScoped<IRecepieService, RecepieService>();
+            services.AddScoped<IRecepieHistoryService, RecepieHistoryService>();
 
             var policy = new AuthorizationPolicyBuilder()
                 .RequireAuthenticatedUser()
