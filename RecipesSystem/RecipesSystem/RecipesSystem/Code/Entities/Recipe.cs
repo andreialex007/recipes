@@ -13,5 +13,7 @@ namespace RecipesSystem.Code.Entities
         public int Calories { get; set; }
 
         public List<RecipeHistory> RecipeHistories { get; set; }
+
+
     }
 }
